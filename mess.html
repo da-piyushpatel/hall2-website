@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<script src="menu_script.js"></script>
+<title>HALL II Mess/Canteen </title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+body {font-family: "Times New Roman", Georgia, Serif;}
+h1,h2,h3,h4,h5,h6 {
+    font-family: "Playfair Display";
+    letter-spacing: 5px;
+}
+* {
+    box-sizing: border-box;
+}
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+.container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+.col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+}
+
+.col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .col-25, .col-75, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+}
+</style>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
+    <a href="#home" class="w3-bar-item w3-button">HALL II Mess/Canteen</a>
+    <!-- Right-sided navbar links. Hide them on small screens -->
+    <div class="w3-right w3-hide-small">
+      <a href="#about" class="w3-bar-item w3-button">Mess</a>
+      <a href="#canteen" class="w3-bar-item w3-button">Canteen</a>
+
+    </div>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="w3-display-container w3-content w3-wide" style="max-width:1600px;min-width:500px" id="home">
+  <img class="w3-image" src="images/mess.jpg" alt="Hamburger Catering" width="1600" height="800">
+  <div class="w3-display-bottomleft w3-padding-large w3-opacity">
+    <h1 class="w3-xxlarge">Le Catering</h1>
+  </div>
+</header>
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:1100px">
+
+  <!-- About Section -->
+  <div class="w3-row w3-padding-64" id="about">
+    <div class="w3-col m6 w3-padding-large w3-hide-small">
+     <img src="images/mess_2.jpg" class="w3-round w3-image w3-opacity-min" alt="Table Setting" width="600" height="750">
+    </div>
+
+    <div class="w3-col m6 w3-padding-large">
+      <h1 class="w3-center">About</h1><br>
+
+      <p class="w3-large">Hall 2 mess provides fine messing facilities to students far from their homes. The mess is a large hall, to seat the 500 residents of Hall2. Hall2 mess serves meals three times each day: breakfast, lunch, and dinner. Also there is the facility of room service in certain special cases.</p>
+      <p class="w3-large" align="justified"> Hall 2 mess is the first and only hostel mess in IIT Kanpur to have a automated computer application developed by its own residents for carrying out transactions for extra items in the menu. The administrative work is handled by a Mess Manager along with the Hostel Mess Council which is the student body comprising of two Mess Secretaries (Mess Secretaries). The mess council tries assiduously that the hostel residents get delicious and nutritious food. The menu is updated frequently based on popular opinion,taking into account the tastes of all the diverse cultures present in the hostel. New dishes are tried out so that the best food is available for the students.The supplies are checked regularly by the mess council to ensure that there is no discrepancy in the supply and the bill made. Juice and Ice-cream corner is also available inside the mess. Place is well maintained and quite hygienic . Almost every variety of juice,shakes and ice creams are available. One can even buy raw fruits as per need. What makes mess so good is the cleanliness. Mess workers work hard to keep it clean. Apart from regular menu,hall 2 mess also provide extra items in almost every lunch and dinner.If you are sick you can have khichadi.You can also get your food delivered to your room in more serious cases.
+      </p>
+
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- Menu Section -->
+  <div class="w3-row w3-padding-64" id="menu">
+    <div class="w3-col l6 w3-padding-large">
+      <h1 class="w3-center" style="font-size:300%">Menu</h1><br>
+  </div>
+
+<div class="w3-row w3-padding-64" id="menu">
+  <div class="w3-center">
+  <div >
+    <form action="/action_page.php">
+         <div class="row">
+        <div class="col-25">
+        <label for="country" style="font-size:183%">Day</label>
+        </div>
+        <div class="col-75">
+          <select id="day" name="country" onchange="menu_print()">
+
+            <option value="select ">Select</option>
+            <option value="mon">Monday</option>
+            <option value="tues">Tuesday</option>
+            <option value="wed">Wednesday</option>
+            <option value="thu">Thursday</option>
+            <option value="fri">Friday</option>
+            <option value="sat">Saturday</option>
+            <option value="sun">Sunday</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-25">
+          <label for="subject" style="font-size:183%">Menu for the Day:</label>
+        </div>
+        <div class="col-75 col-25 w3-content w3-container  w3-padding-48 w3-card">
+            <h5>Breakfast:</h5>
+          <p class="w3-text-grey"></p><br>
+
+          <h5>Lunch:</h5>
+          <p class="w3-text-grey"></p><br>
+
+          <h5>Dinner:</h5>
+          <p class="w3-text-grey"></p><br>
+        </div>
+      </div>
+
+      <div class="row">
+      <br>  <input type="submit" value="Submit">
+      </div>
+    </form>
+  </div>
+</div>
+</div>
+
+
+
+</div>
+
+  <hr>
+
+  <!-- Contact Section -->
+  <div class="w3-container w3-padding-64" id="canteen">
+    <h1>Canteen</h1><br>
+    <p class="w3-large">This is the place to get all the food stuff other than mess. Canteen timings are from 2 pm to 2 am. It attracts most of the hall junta for evening snacks and popular late night munchings. A plethora of varieties are available to cater to your taste buds. Additional facilities like LCD tv are also available to draw the crowd, especially on match days.</p>
+    <!--<p class="w3-text-blue-grey w3-large"><b>Catering Service, 42nd Living St, 43043 New York, NY</b></p>
+    <p>You can also contact us by phone 00553123-2323 or email catering@catering.com, or you can send us a message here:</p>
+    <form action="/action_page.php" target="_blank">
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Name" required name="Name"></p>
+      <p><input class="w3-input w3-padding-16" type="number" placeholder="How many people" required name="People"></p>
+      <p><input class="w3-input w3-padding-16" type="datetime-local" placeholder="Date and time" required name="date" value="2017-11-16T20:00"></p>
+      <p><input class="w3-input w3-padding-16" type="text" placeholder="Message \ Special requirements" required name="Message"></p>
+      <p><button class="w3-button w3-light-grey w3-section" type="submit">SEND MESSAGE</button></p>
+    </form> -->
+  </div>
+
+<!-- End page content -->
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-light-grey w3-padding-32">
+  <p>Powered by HALL II </p>
+</footer>
+
+
+</body>
+</html>
