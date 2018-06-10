@@ -1,2 +1,4 @@
 adding a paper texture
 adding paper scroll.
+
+adding self typing methods

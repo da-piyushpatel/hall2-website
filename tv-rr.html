@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<title>My_Home_Page</title>
+<title>Common Rooms</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="css/css_file_one.css">
@@ -25,16 +25,10 @@ body, html {
 .bgimg-1 {
     background-image: url('images/hall2.jpg');
     min-height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
 }
 /* Second image (Portfolio) */
 .bgimg-2 {
     background-image: url("images/hall2_2.jpg");
-    min-height: 400px;
-}
-/* Third image (Contact) */
-.bgimg-3 {
-    background-image: url("images/hall2_3.jpg");
     min-height: 400px;
 }
 .w3-wide {letter-spacing: 10px;}
@@ -52,7 +46,7 @@ body, html {
 </style>
 <script >
   var i = 0;
-  var txt = 'HALL 2 , THE BEST PLACE IN IIT-K';
+  var txt = 'HALL 2 COMMON ROOMS';
   var speed = 100;
   var j = 1;
 function typeWriter() {
@@ -60,7 +54,7 @@ function typeWriter() {
     document.getElementById("self-type").innerHTML += txt.charAt(i);
     i++;
     setTimeout(typeWriter, speed);
-}
+  }
 }
 </script>
 <body onload="typeWriter()">
@@ -76,7 +70,6 @@ function typeWriter() {
     <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> PORTFOLIO</a>
     <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
     <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
-      <i class="fa fa-search"></i>
     </a>
   </div>
 
@@ -135,24 +128,23 @@ Every fresher will feel the aura!
   <div class="w3-light-grey">
     <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:75%">75%</div>
   </div> -->
-  <div class="counter" data-count="41">0</div>
 </div>
 
 <div class="w3-row w3-center w3-dark-grey w3-padding-16" style="line-height:1.0">
   <div class="w3-quarter w3-section">
-    <span class="w3-xlarge" >500</span><br>
+    <span class="w3-xlarge">350+</span><br>
     Students
   </div>
   <div class="w3-quarter w3-section">
-    <span class="w3-xlarge">30</span><br>
+    <span class="w3-xlarge">20+</span><br>
     Hall Staff
   </div>
   <div class="w3-quarter w3-section">
-    <span class="w3-xlarge" id="hab">18</span><br>
+    <span class="w3-xlarge">15+</span><br>
     HAB Members
   </div>
   <div class="w3-quarter w3-section">
-    <span class="w3-xlarge" id="wardens">3</span><br>
+    <span class="w3-xlarge">3+</span><br>
     Wardens
   </div>
 </div>
