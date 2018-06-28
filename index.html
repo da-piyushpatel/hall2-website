@@ -8,9 +8,11 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'>
 <link rel="stylesheet" href="assets/css/main.css" />
+<link href='https://fonts.googleapis.com/css?family=Aldrich' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Asap' rel='stylesheet'>
 <script type="text/javascript" src="js/counter.js"></script>
 <style>
-body,h1,h2,h3,h4,h5,h6 {font-family: "Aclonica  ", sans-serif;}
+body,h1,h2,h3,h4,h5,h6 {font-family: "Asap", sans-serif;}
 body, html {
     height: 100%;
     color: #777;
@@ -50,7 +52,61 @@ body, html {
 .rajput-logo{
   text-align: center;
 }
+#self-type{
+  font-family: "Aldrich";
+}
+#quadimage{
+  opacity: 0.7;
+}
+#quadimage:hover{
+  opacity:1.0;
+  transition-duration: 1s;
+}
+.zoom {
+    transition: transform .2s;
+    margin: 0 auto;
+}
 
+.zoom:hover {
+    -ms-transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(1.5); /* Safari 3-8 */
+    transform: scale(1.5); 
+}
+.gallery_button{
+  background-color: #808080;
+  margin-top:32px;
+  margin-bottom: 64px;
+  padding-top-bottom:3px;
+  border-radius: 2px;
+  box-shadow: 5px 5px 5px #555;
+}
+.gallery_button:hover{
+  background-color: black;
+  transition-duration: 1s ease-in-ease-out;
+  box-shadow: 0px 0px 0px;
+}
+.gallerydiv{
+  margin-bottom: 40px;
+  margin-top: 35px;
+  text-align: center;
+}
+.gallimg{
+
+}
+.gall_img{
+
+}
+ul#gallimg li{
+  display: inline-block;
+  margin:0px;
+  padding: 0px;
+}
+ul#gallimg li:hover{
+   -ms-transform: scale(1.05) ease-in-ease-out;
+    -webkit-transform: scale(1.05) ease-in-ease-out;
+    transform: scale(1.05); 
+    transition-duration: 1s;
+}
 </style>
 <script >
   var i = 0;
@@ -75,7 +131,7 @@ function typeWriter() {
     </a>
     <a href="#home" class="w3-bar-item w3-button">HOME</a>
     <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT</a>
-    <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> PORTFOLIO</a>
+    <a href="portfolio.html" target="_blank" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> PORTFOLIO</a>
     <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
     <a href="gallery_index.html" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
       <i class="fa fa-instagram"></i>GALLERY
@@ -87,8 +143,7 @@ function typeWriter() {
     <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
     <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">PORTFOLIO</a>
     <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
-    <a href="gallery_index.html" class="w3-bar-item w3-button" onclick="toggleFunction()">GALLERY</a>
-    <a href="#" class="w3-bar-item w3-button">SEARCH</a>
+    <a href="gallery_index.html" class="w3-bar-item w3-button" target="_blank"> GALLERY</a>
   </div>
 </div>
 
@@ -101,7 +156,6 @@ function typeWriter() {
 
 <!-- Container (About Section) -->
 <div class="w3-content w3-container w3-padding-64" id="about">
-  <h3 class="w3-center">ABOUT</h3>
   <p class="w3-center"><em>Hall of Residence II </em></p>
   <p>Hall of Residence 2 (Hall-2) is one of the oldest among the hostels at IIT Kanpur. It is situated at center zone of IIT Kanpur campus. The hostel has seven blocks, A, B, C, D, E, F, and G. Every block is a three storey building consisting 10-14 rooms in a row on every floor. It has a capacity of about 600 students. The hall population consists of 1st, 2nd and 3rd year B-tech students. The rich culture of the hall has always ensured overall development of its residents, with a number of events organised for the first year students the students get a taste of almost all the activities organised in the institute.Students are allowed to find their passion and pursue it. With a healthy interaction between the students and the seniors the barrier among friends and seniors fades away building a strong relationship between the hall residents.The games courtyard is almost always filled with students playing with their friends and seniors.If one so wants to spend sometime close to the nature, he could always go to the lush green quad and feed the peacocks roaming there.</p>
 
@@ -110,8 +164,10 @@ function typeWriter() {
   </div>
   <div class="w3-row">
     <div class="w3-col m6 w3-center w3-padding-large">
+      <div class="zoom">
       <p><b><i class="fa fa-user w3-margin-right"></i>Quads</b></p><br>
-      <img src="images/hall2_1.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Me" width="400" height="233">
+      <img src="images/hall2_1.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" id="quadimage" alt="Hall 2 Quads" width="400" height="233">
+    </div>
     </div>
 
     <!-- Hide this text on small devices -->
@@ -163,36 +219,29 @@ Every fresher will feel the aura!
 <!-- Second Parallax Image with Portfolio Text -->
 <div class="bgimg-2 w3-display-container w3-opacity-min">
   <div class="w3-display-middle">
-    <span class="w3-xxlarge w3-text-white w3-wide">PORTFOLIO</span>
+    <span class="w3-xxlarge w3-text-white w3-wide">GALLEERY</span>
   </div>
 </div>
 
 <!-- Container (Portfolio Section) -->
-<div class="w3-content w3-container w3-padding-64" id="portfolio">
-  <h3 class="w3-center">GALLERY</h3>
-  <p class="w3-center"><em>Here are some of our latest photos</em></p><br>
+<div class="gallerydiv">
+  <h1 class="w3-center">GALLERY</h3>
+  <p class="gallsubtitle"><em>Here are some of our latest photos</em></p><br>
 
   <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
-  <div class="w3-row-padding w3-center">
-    <div class="about">
-                      <div class="media all people">
-                        <a href="images/fulls/01.jpg"><img src="images/thumbs/01.jpg" alt="" title="This right here is a caption."  /></a>
-                      </div>
-                      <div class="media all place">
-                        <a href="images/fulls/05.jpg"><img src="images/thumbs/05.jpg" alt="" title="This right here is a caption." /></a>
-                      </div>
-                      <div class="media all thing">
-                        <a href="images/fulls/09.jpg"><img src="images/thumbs/09.jpg" alt="" title="This right here is a caption." /></a>
-                      </div>
-                      <div class="media all people">
-                        <a href="images/fulls/02.jpg"><img src="images/thumbs/02.jpg" alt="" title="This right here is a caption." /></a>
-                      </div>
-                      <div class="media all place">
-                        <a href="images/fulls/06.jpg"><img src="images/thumbs/06.jpg" alt="" title="This right here is a caption." /></a>
-                      </div>
+  <div class="gallimg">
+    <div class="gall_img">
+                      <ul id="gallimg">
+                        <li><a href="images/fulls/01.jpg"><img src="images/thumbs/01.jpg" alt="Hall-2" /></a></li>
+                        <li><a href="images/fulls/05.jpg"><img src="images/thumbs/05.jpg" alt="Hall-2" /></a></li>
+                        <li><a href="images/fulls/09.jpg"><img src="images/thumbs/09.jpg" alt="Hall-2" /></a></li>
+                        <li><a href="images/fulls/02.jpg"><img src="images/thumbs/02.jpg" alt="Hall-2" /></a></li>
+                        <li><a href="images/fulls/03.jpg"><img src="images/thumbs/03.jpg" alt="Hall-2" /></a></li>
+                        <li><a href="images/fulls/04.jpg"><img src="images/thumbs/04.jpg" alt="Hall-2" /></a></li>
+                      </ul>
       </div>
     <a href="gallery_index.html">
-    <button class="w3-button w3-padding-large w3-light-grey" style="margin-top:64px">FULL GALLERY</button></a>
+    <button class="gallery_button">FULL GALLERY</button></a>
   </div>
 </div>
 
@@ -218,17 +267,17 @@ Every fresher will feel the aura!
   <p class="w3-center"><em>Would love to hear from you.</em></p>
 
   <div class="w3-row w3-padding-32 w3-section">
-    <div class="w3-col m4 w3-container">
-      <!-- Add Google Maps -->
+    <!-- <div class="w3-col m4 w3-container">
+     -->  <!-- Add Google Maps --><!-- 
       <div id="googleMap" class="w3-round-large w3-greyscale" style="width:100%;height:400px;"></div>
-    </div>
-    <div class="w3-col m8 w3-panel">
+    </div> -->
+    <!-- <div class="w3-col m8 w3-panel"> -->
       <div class="w3-large w3-margin-bottom">
         <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i>Hall II,Indian Institue of Technology, Kalyanpur, Kanpur.<br>
         <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: +00 151515<br>
         <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: hall2@gmail.com<br>
       </div>
-      <p>Let's talk <i class="fa fa-coffee"></i></p>
+      <p>Let' talk <i class="fa fa-coffee"></i></p>
       <form action="/action_page.php" target="_blank">
         <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
           <div class="w3-half">
@@ -243,7 +292,7 @@ Every fresher will feel the aura!
           <i class="fa fa-paper-plane"></i> SEND MESSAGE
         </button>
       </form>
-    </div>
+    <!-- </div> -->
   </div>
 </div>
 
@@ -260,7 +309,7 @@ Every fresher will feel the aura!
   </div> -->
   <p>Powered by HALL II</a></p>
   <br>
-  <p>Developed by <a href="#" target="_blank"> Sahil Khan</a> and <a href="faceook.com/piyush.patel.319" target="_blank"> Piyush Patel</a></p>
+  <p>Developed by <a href="#" target="_blank"> Sahil Khan</a> and <a href="http://home.iitk.ac.in/~ppatel/self.html" target="_blank"> Piyush Patel</a></p>
 </footer>
 
 <!-- Add Google Maps -->
